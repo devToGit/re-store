@@ -1,7 +1,8 @@
-export default class BookstoreSeervice {
+import React from 'react';
+import BookList from '../book-list';
 
-  getBooks() {
-      return [
+const HomePage = () => {
+    const books = [
         {
           id: 1,
           title: 'Production-Ready Microservices',
@@ -12,6 +13,11 @@ export default class BookstoreSeervice {
           title: 'Release It!',
           author: 'Michael T. Nygard'
         },
-      ];
-  }
-}
+    ];
+
+    return (
+        < BookList books={books}/>
+    )
+};
+
+export default HomePage;
